@@ -52,7 +52,12 @@ Format and verify a changelog before submitting it through GOG's "Create Changel
 - Describe what was broken and what now happens, in one sentence per fix.
 - Merge near-duplicate fixes only when they share the same root cause. If two distinct triggers caused the same symptom, list them as separate bullets for clarity.
 
-## 7. Before-submitting checklist
+## 7. Output file
+- Save the finished changelog as a standalone `.md` file, in addition to presenting it in the conversation.
+- Name the file after the version name from §1, exactly as it will be submitted — e.g. `Patch 0.7.04.0404 (15 September 2026).md`.
+- Save it in the directory Claude Code started in for the session (the initial working directory), not whatever directory the conversation may have navigated to since.
+
+## 8. Before-submitting checklist
 - [ ] Version name includes number + date
 - [ ] Intro line present, no hype words
 - [ ] Intro line and feature-explanation paragraphs passed through `/humanizer` (embedded mode, technical register kept)
@@ -60,3 +65,4 @@ Format and verify a changelog before submitting it through GOG's "Create Changel
 - [ ] All features/languages confirmed live on the GOG build
 - [ ] Literal text search for "Steam" / "Valve" / "Steamworks" returns zero hits
 - [ ] Grammar and punctuation pass
+- [ ] Output saved as `[version name].md` in Claude Code's starting directory
