@@ -94,10 +94,23 @@ Run every draft through the `/humanizer` skill before presenting it. Use embedde
 rewritten text) once this skill is being run non-interactively; in normal use, the draft/audit/final loop
 is fine to show if useful, but the version handed to the user for approval must be the humanized final.
 
-## 6. Logging
+## 6. Presenting the draft
 
-Append every review + response pair to `review-log.md` in the current working directory (create the file
-if it doesn't exist — see the template below). Include:
+The chat response is the deliverable — the user copies it straight into Steam's reply box. After the
+humanizer pass:
+- Output the final draft in its own fenced code block (` ``` `), plain text, no blockquote `>` markers,
+  no bold/markdown styling inside it. A `>` or `**` in front of every line means the user has to strip
+  formatting before pasting — don't make them do that.
+- Don't pad it with a restated checklist, a re-listing of which complaints were covered, or other
+  commentary inside or immediately around the block. One short line before it ("Here's the draft:") is
+  enough context; save any caveats (e.g. "skipped points 2 and 5 per your note") for a line after the
+  block, not before it.
+
+## 7. Logging (for future reference only)
+
+The log is a record for later, not something to present or narrate to the user each time. Append every
+review + response pair to `review-log.md` in the current working directory (create the file if it doesn't
+exist — see the template below) after presenting the draft, without walking the user through it. Include:
 - Username, source URL (if any), recommendation status, hours, posted date.
 - Full review text.
 - Numbered complaints extracted.
@@ -131,7 +144,7 @@ if it doesn't exist — see the template below). Include:
 **Status:** Draft — awaiting approval
 ```
 
-## 7. Before-sending checklist
+## 8. Before-sending checklist
 
 - [ ] Every reviewer name/detail used is accurate (no invented names, hours, or dates)
 - [ ] Every complaint addressed has explicit developer input behind it, or is a standard F8 ask
