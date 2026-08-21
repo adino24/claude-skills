@@ -64,8 +64,8 @@ Format and verify a changelog before submitting it through GOG's "Create Changel
 
 ## 8. Output file
 - Save the finished changelog as a standalone `.md` file, in addition to presenting it in the conversation.
-- Name the file after the version name from §2, exactly as it will be submitted — e.g. `Patch 0.7.04.0404 (15 September 2026).md`.
-- Save it in the directory Claude Code started in for the session (the initial working directory), not whatever directory the conversation may have navigated to since.
+- Name the file after the version name (title) from §2, exactly as it will be submitted — e.g. `Patch 0.7.04.0404 (15 September 2026).md`.
+- Save it inside a `GOG-Changelogs` folder within the directory Claude Code started in for the session (the initial working directory), not whatever directory the conversation may have navigated to since. Create the `GOG-Changelogs` folder if it doesn't already exist.
 
 ## 9. Before-submitting checklist
 - [ ] Source content fetched (if a link) and stripped of greetings, thank-yous, and sign-off fluff
@@ -77,4 +77,4 @@ Format and verify a changelog before submitting it through GOG's "Create Changel
 - [ ] All features/languages confirmed live on the GOG build
 - [ ] Literal text search for "Steam" / "Valve" / "Steamworks" returns zero hits
 - [ ] Grammar and punctuation pass
-- [ ] Output saved as `[version name].md` in Claude Code's starting directory
+- [ ] Output saved as `GOG-Changelogs/[version name].md` in Claude Code's starting directory
